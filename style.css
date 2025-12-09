@@ -1,0 +1,106 @@
+
+  body {
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(#f8d9ff, #ffdada);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Nyan cat */
+#nyan {
+  width: 180px;
+  position: fixed;
+  top: 20px;
+  left: -200px;
+  animation: run 6s linear infinite;
+}
+
+@keyframes run {
+  0% { left: -200px; }
+  100% { left: 110%; }
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.gallery img {
+  width: 180px;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Chatbox */
+.chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  height: 230px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#chatMessages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+#chatInput {
+  border: none;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  outline: none;
+  font-size: 14px;
+}
+
+/* MESSAGE BUBBLES */
+.message {
+  display: flex;
+  margin: 8px 0;
+  align-items: flex-end;
+}
+
+.message.me {
+  justify-content: flex-end;
+}
+
+.message.you img {
+  width: 32px;
+  height: 32px;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+
+.bubble {
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 70%;
+  text-align: left;
+}
+
+.me .bubble {
+  background: #ffd0f7;
+}
+
+.you .bubble {
+  background: #e9e9e9;
+}
